@@ -14,6 +14,8 @@
 		E14C823324813993008B84D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14C823124813993008B84D5 /* LaunchScreen.storyboard */; };
 		E14C823B24813BFF008B84D5 /* UserListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C823A24813BFF008B84D5 /* UserListsTableViewController.swift */; };
 		E14C823D24813EFF008B84D5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C823C24813EFF008B84D5 /* ListCell.swift */; };
+		E14C823F248143B1008B84D5 /* CreationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C823E248143B1008B84D5 /* CreationListViewController.swift */; };
+		E1DCD3D22482424400552D88 /* FullListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DCD3D12482424400552D88 /* FullListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E14C823424813993008B84D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14C823A24813BFF008B84D5 /* UserListsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListsTableViewController.swift; sourceTree = "<group>"; };
 		E14C823C24813EFF008B84D5 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		E14C823E248143B1008B84D5 /* CreationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationListViewController.swift; sourceTree = "<group>"; };
+		E1DCD3D12482424400552D88 /* FullListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E14C822F24813993008B84D5 /* Assets.xcassets */,
 				E14C823124813993008B84D5 /* LaunchScreen.storyboard */,
 				E14C823424813993008B84D5 /* Info.plist */,
+				E14C823E248143B1008B84D5 /* CreationListViewController.swift */,
+				E1DCD3D12482424400552D88 /* FullListViewController.swift */,
 			);
 			path = UserLists;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14C82272481397F008B84D5 /* AppDelegate.swift in Sources */,
+				E14C823F248143B1008B84D5 /* CreationListViewController.swift in Sources */,
 				E14C823D24813EFF008B84D5 /* ListCell.swift in Sources */,
+				E1DCD3D22482424400552D88 /* FullListViewController.swift in Sources */,
 				E14C823B24813BFF008B84D5 /* UserListsTableViewController.swift in Sources */,
 				E14C82292481397F008B84D5 /* SceneDelegate.swift in Sources */,
 			);

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,8 +61,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="creationDateLabel" destination="Mcr-qy-Iai" id="Qws-vl-aVf"/>
-                                    <outlet property="textView" destination="3jG-6e-mvj" id="V5Y-Kc-Cwd"/>
+                                    <outlet property="shortTextView" destination="3jG-6e-mvj" id="V5Y-Kc-Cwd"/>
                                     <outlet property="updateDateLabel" destination="XRO-kI-qL3" id="XTU-3y-mkc"/>
+                                    <segue destination="BOB-NC-e5Y" kind="show" id="YDw-p8-Q1J"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,11 +72,89 @@
                             <outlet property="delegate" destination="GBF-je-U1j" id="jTa-bQ-pmH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lists" largeTitleDisplayMode="always" id="q0t-Im-Puy"/>
+                    <navigationItem key="navigationItem" title="Lists" largeTitleDisplayMode="always" id="q0t-Im-Puy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BWc-KZ-Pv9">
+                            <connections>
+                                <segue destination="LVU-vm-I6M" kind="show" identifier="GoToCreationListVC" id="S8D-ye-LMw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYG-d5-xsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="497.10144927536237" y="-218.30357142857142"/>
+        </scene>
+        <!--Full List View Controller-->
+        <scene sceneID="XkD-W7-hqS">
+            <objects>
+                <viewController storyboardIdentifier="FullListViewController" id="BOB-NC-e5Y" customClass="FullListViewController" customModule="UserLists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uno-jD-NZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZfU-WO-le6">
+                                <rect key="frame" x="8" y="88" width="398" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZfU-WO-le6" firstAttribute="leading" secondItem="tee-ea-Do7" secondAttribute="leading" constant="8" id="JXD-xx-S55"/>
+                            <constraint firstItem="tee-ea-Do7" firstAttribute="bottom" secondItem="ZfU-WO-le6" secondAttribute="bottom" id="QJX-Cq-IOI"/>
+                            <constraint firstItem="ZfU-WO-le6" firstAttribute="top" secondItem="tee-ea-Do7" secondAttribute="top" id="Wha-5S-1iK"/>
+                            <constraint firstItem="tee-ea-Do7" firstAttribute="trailing" secondItem="ZfU-WO-le6" secondAttribute="trailing" constant="8" id="XGr-cb-MBv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tee-ea-Do7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Ax-Ea-xlz"/>
+                    <connections>
+                        <outlet property="fullTextView" destination="ZfU-WO-le6" id="1wU-BA-Pz6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zs6-Oz-uMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="93"/>
+        </scene>
+        <!--Creation List View Controller-->
+        <scene sceneID="aH4-Yk-HUu">
+            <objects>
+                <viewController storyboardIdentifier="CreationListViewController" id="LVU-vm-I6M" customClass="CreationListViewController" customModule="UserLists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4BJ-Qv-QeH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="New text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-qZ-rit">
+                                <rect key="frame" x="8" y="88" width="398" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ihp-qZ-rit" firstAttribute="top" secondItem="beh-Fz-0fe" secondAttribute="top" id="fzz-Lt-Ly7"/>
+                            <constraint firstItem="beh-Fz-0fe" firstAttribute="bottom" secondItem="Ihp-qZ-rit" secondAttribute="bottom" id="iZX-Ty-jhF"/>
+                            <constraint firstItem="beh-Fz-0fe" firstAttribute="trailing" secondItem="Ihp-qZ-rit" secondAttribute="trailing" constant="8" id="mtN-14-ZaV"/>
+                            <constraint firstItem="Ihp-qZ-rit" firstAttribute="leading" secondItem="beh-Fz-0fe" secondAttribute="leading" constant="8" id="wks-7d-ovp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="beh-Fz-0fe"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="wOp-St-FTZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fBo-sC-BRI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dee-yw-Mrq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="creationTextView" destination="Ihp-qZ-rit" id="qtV-Rn-gou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZU-oP-Sea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="-603"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SJh-zX-CQB">

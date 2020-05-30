@@ -12,6 +12,6 @@ class ListCell: UITableViewCell {
 
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var updateDateLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var shortTextView: UITextView!
     
 }
